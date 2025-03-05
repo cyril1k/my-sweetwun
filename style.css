@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #FF6B6B, #FFD700);
+  color: white;
+  font-family: 'Georgia', sans-serif;
+  overflow: hidden;
+}
+
+.message-container {
+  text-align: center;
+  position: fixed;
+}
+
+.message {
+  font-size: 2.0em;
+  padding: 150px;
+  background-image: url('photo_2025-03-05_16-51-00.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  font-family: 'Pacifio', cursive;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti {
+  position: absolute;
+  font-size: 1.2em; /* Adjust heart size */
+  animation: confettiFall 2s linear infinite;
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-100px); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
